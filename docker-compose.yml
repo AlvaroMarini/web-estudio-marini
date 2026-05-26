@@ -1,0 +1,11 @@
+version: '3.8'
+
+services:
+  web-estudio-marini:
+    container_name: web_estudio_marini
+    build: 
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "5174:80" # El puerto 8080 de tu PC apunta al 80 del contenedor
+    restart: always
