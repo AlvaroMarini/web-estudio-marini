@@ -1,9 +1,11 @@
 import { TbBrandWhatsapp } from "react-icons/tb";
 
 export const BotonWhatsApp = () => {
+    const mensajePredeterminado = "Hola Dr. Marini, me comunico desde su página web. Me gustaría hacerle una consulta sobre mi caso.";
+    const linkWhatsapp = `https://wa.me/5492214202444?text=${encodeURIComponent(mensajePredeterminado)}`;
     return (
     <a 
-        href="https://wa.me/5492214202444" 
+        href={linkWhatsapp}
         target="_blank" 
         rel="noopener noreferrer"
         className="fixed bottom-6 right-6 z-50 flex items-center hover:-translate-y-1 transition-transform duration-300"

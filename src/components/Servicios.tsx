@@ -29,11 +29,11 @@ export const Servicios = () => {
         </div>
 
         {/* Grilla de 6 columnas en pantallas grandes */}
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8 text-center">
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8 lg:gap-0 lg:divide-x divide-[#D4AF37]/30 text-center">
             {servicios.map((servicio) => (
             <div 
                 key={servicio.id} 
-                className="flex flex-col items-center gap-4 hover:-translate-y-1 transition-transform duration-300 cursor-pointer"
+                className="flex flex-col items-center gap-4 hover:-translate-y-1 transition-transform duration-300 cursor-pointer lg:px-4"
             >
                 <div className="h-16 flex items-center justify-center">
                 {servicio.icon}

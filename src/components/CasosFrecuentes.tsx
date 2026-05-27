@@ -40,9 +40,9 @@ export const CasosFrecuentes = () => {
         
         {/* Título de la sección */}
         <div className="flex items-center justify-center gap-4 mb-12">
-            <div className="h-px w-16 bg-gray-300"></div>
+            <div className="h-px w-16 bg-[#D4AF37]"></div>
             <h2 className="text-[#0A122A] text-xl font-serif tracking-[0.2em]">CASOS FRECUENTES</h2>
-            <div className="h-px w-16 bg-gray-300"></div>
+            <div className="h-px w-16 bg-[#D4AF37]"></div>
         </div>
 
         {/* Grilla de Tarjetas */}
@@ -61,9 +61,9 @@ export const CasosFrecuentes = () => {
                 <p className="text-gray-600 text-sm mb-6 grow">
                 {caso.desc}
                 </p>
-                <button className="text-[#D4AF37] text-sm font-semibold hover:text-[#b5952f] transition-colors mt-auto cursor-pointer">
+                {/* <button className="text-[#D4AF37] text-sm font-semibold hover:text-[#b5952f] transition-colors mt-auto cursor-pointer">
                 Consultar →
-                </button>
+                </button> */}
             </div>
             ))}
         </div>

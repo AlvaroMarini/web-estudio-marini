@@ -2,108 +2,139 @@ import { useState } from 'react';
 import { Plus, Minus, Gavel } from 'lucide-react';
 
 export const FaqYJurisprudencia = () => {
-    // Estado para controlar qué pregunta del acordeón está abierta
-    const [openId, setOpenId] = useState<number | null>(null);
+    const [preguntaActiva, setPreguntaActiva] = useState<number | null>(null);
 
-    const toggleFaq = (id: number) => {
-    setOpenId(openId === id ? null : id);
+    const togglePregunta = (index: number) => {
+    setPreguntaActiva(preguntaActiva === index ? null : index);
     };
 
-    const faqs = [
-    { id: 1, p: "¿Es obligatorio pasar a PAMI al jubilarse?", r: "No. La ley de obras sociales y la jurisprudencia actual avalan tu derecho a elegir y mantener tu cobertura de origen." },
-    { id: 2, p: "¿Puedo conservar mi prepaga?", r: "Sí, tenés derecho a exigir la continuidad de tu plan en idénticas condiciones a las que tenías antes de jubilarte." },
-    { id: 3, p: "¿Qué pasa con mis aportes?", r: "Tus aportes jubilatorios de salud pueden ser derivados a la obra social o prepaga que elijas mediante el trámite correspondiente." },
-    { id: 4, p: "¿Necesito iniciar juicio?", r: "En muchos casos se resuelve mediante un reclamo administrativo o una acción de amparo rápida. Evaluamos cada situación particular." },
-    { id: 5, p: "¿Cuánto demora el trámite?", r: "Depende de la vía (administrativa o judicial), pero las medidas cautelares en salud suelen salir en cuestión de días o semanas." },
+    const preguntas = [
+    {
+        pregunta: "¿Es obligatorio pasar a PAMI al jubilarse?",
+        respuesta: "No, la ley ampara su derecho a continuar con su misma cobertura médica al momento de jubilarse, evitando el traspaso forzoso."
+    },
+    {
+        pregunta: "¿Puedo conservar mi prepaga?",
+        respuesta: "Sí. El cese de la relación laboral por jubilación no autoriza a la empresa de medicina prepaga a dar de baja la afiliación."
+    },
+    {
+        pregunta: "¿Qué pasa con mis aportes?",
+        respuesta: "Sus aportes de ANSES pueden ser derivados a la obra social o prepaga que usted elija mantener, mediante el trámite correspondiente."
+    },
+    {
+        pregunta: "¿Necesito iniciar juicio?",
+        respuesta: "Depende del caso y de la respuesta de la prepaga. Muchas veces se resuelve con intimaciones formales, en otras es necesario un amparo de salud."
+    },
+    {
+        pregunta: "¿Cuánto demora el trámite?",
+        respuesta: "Los tiempos varían. Si requiere medida cautelar judicial, la protección de su salud suele resolverse de forma rápida y prioritaria."
+    }
     ];
 
-    const jurisprudencias = [
+    const fallos = [
     {
-        id: 1,
         titulo: "Conservación de cobertura médica tras jubilación",
-        desc: "Fallos que reconocen el derecho del afiliado a mantener su cobertura médica al momento de jubilarse."
+        descripcion: "Fallos que reconocen el derecho del afiliado a mantener su cobertura médica al momento de jubilarse.",
+        link: "#"
     },
     {
-        id: 2,
         titulo: "Continuidad de prepaga para afiliado jubilado",
-        desc: "Jurisprudencia que garantiza la continuidad de la prestación sin traspaso forzoso a PAMI."
+        descripcion: "Jurisprudencia que garantiza la continuidad de la prestación sin traspaso forzoso a PAMI.",
+        link: "#"
     },
     {
-        id: 3,
         titulo: "Acción de amparo por derecho a la salud",
-        desc: "Reconocimiento del derecho a la salud y a la libre elección de la cobertura médica."
+        descripcion: "Reconocimiento del derecho a la salud y a la libre elección de la cobertura médica.",
+        link: "#"
     }
     ];
 
     return (
-    <section className="bg-white py-20 px-8" id="faq">
-        <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16">
+    <section className="py-20 bg-white text-[#0A122A]">
+        <div className="max-w-7xl mx-auto px-8 grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24">
         
-        {/* Columna Izquierda: Preguntas Frecuentes */}
-        <div className="flex flex-col">
-            <div className="flex items-center gap-4 mb-8">
-            <div className="h-px w-12 bg-gray-300"></div>
-            <h2 className="text-[#0A122A] text-lg font-serif tracking-[0.2em]">PREGUNTAS FRECUENTES</h2>
-            <div className="h-px w-12 bg-gray-300"></div>
+        {/* COLUMNA IZQUIERDA: PREGUNTAS FRECUENTES (Acá está el ID "faq") */}
+        <div id="faq" className="flex flex-col scroll-mt-28">
+            <div className="flex items-center gap-4 mb-10">
+            <div className="h-px bg-[#D4AF37] grow"></div>
+            <h2 className="text-base font-serif tracking-widest uppercase font-semibold text-gray-800">
+                PREGUNTAS FRECUENTES
+            </h2>
+            <div className="h-px bg-[#D4AF37] grow"></div>
             </div>
 
             <div className="flex flex-col border-t border-gray-200">
-            {faqs.map((faq) => (
-                <div key={faq.id} className="border-b border-gray-200">
-                <button 
-                    onClick={() => toggleFaq(faq.id)}
-                    className="w-full py-4 flex justify-between items-center text-left hover:text-[#D4AF37] transition-colors cursor-pointer"
+            {preguntas.map((item, index) => (
+                <div key={index} className="border-b border-gray-200 overflow-hidden">
+                <button
+                    onClick={() => togglePregunta(index)}
+                    className="w-full text-left py-4 flex justify-between items-center bg-white hover:bg-gray-50 transition-colors cursor-pointer"
                 >
-                    <span className="text-[#0A122A] font-medium pr-4">{faq.p}</span>
-                    {openId === faq.id ? (
+                    <span className="font-bold text-[15px] text-gray-800">{item.pregunta}</span>
+                    {preguntaActiva === index ? (
                     <Minus className="w-5 h-5 text-[#D4AF37] shrink-0" />
                     ) : (
                     <Plus className="w-5 h-5 text-[#D4AF37] shrink-0" />
                     )}
                 </button>
-                {/* Contenido desplegable */}
-                {openId === faq.id && (
-                    <div className="pb-4 text-gray-600 text-sm animate-fade-in">
-                    {faq.r}
-                    </div>
-                )}
+                
+                <div 
+                    className={`overflow-hidden transition-all duration-300 ease-in-out ${
+                    preguntaActiva === index ? 'max-h-40 pb-4 opacity-100' : 'max-h-0 opacity-0'
+                    }`}
+                >
+                    <p className="text-gray-600 text-sm leading-relaxed pr-8">
+                    {item.respuesta}
+                    </p>
+                </div>
                 </div>
             ))}
             </div>
-            
-            <button className="mt-8 border border-[#D4AF37] text-[#D4AF37] px-6 py-2 text-sm font-semibold w-fit hover:bg-[#D4AF37]/10 transition-colors cursor-pointer mx-auto lg:mx-0">
-            VER TODAS LAS PREGUNTAS
-            </button>
         </div>
 
-        {/* Columna Derecha: Jurisprudencia Destacada */}
-        <div className="flex flex-col">
-            <div className="flex items-center gap-4 mb-8">
-            <div className="h-px w-12 bg-gray-300"></div>
-            <h2 className="text-[#0A122A] text-lg font-serif tracking-[0.2em]">JURISPRUDENCIA DESTACADA</h2>
-            <div className="h-px w-12 bg-gray-300"></div>
+        {/* COLUMNA DERECHA: JURISPRUDENCIA (Acá está el ID "jurisprudencia") */}
+        <div id="jurisprudencia" className="flex flex-col scroll-mt-28">
+            <div className="flex items-center gap-4 mb-10">
+            <div className="h-px bg-[#D4AF37] grow"></div>
+            <h2 className="text-base font-serif tracking-widest uppercase font-semibold text-gray-800">
+                JURISPRUDENCIA DESTACADA
+            </h2>
+            <div className="h-px bg-[#D4AF37] grow"></div>
             </div>
 
-            <div className="flex flex-col gap-8">
-            {jurisprudencias.map((item) => (
-                <div key={item.id} className="flex gap-4">
-                <div className="w-12 h-12 rounded-full bg-[#0A122A] flex items-center justify-center shrink-0">
-                    <Gavel className="w-6 h-6 text-[#D4AF37]" strokeWidth={1.5} />
+            <div className="flex flex-col gap-10">
+            {fallos.map((item, index) => (
+                <div key={index} className="flex gap-6">
+                <div className="w-12 h-12 rounded-full bg-[#0A122A] flex items-center justify-center shrink-0 shadow-md">
+                    <Gavel className="w-5 h-5 text-[#D4AF37]" />
                 </div>
+                
                 <div className="flex flex-col">
-                    <h3 className="text-[#0A122A] font-serif font-semibold mb-1">{item.titulo}</h3>
-                    <p className="text-gray-600 text-sm mb-2">{item.desc}</p>
-                    <a href="#" className="text-[#D4AF37] text-sm font-semibold hover:underline flex items-center gap-1">
-                    Ver fallo →
+                    <h3 className="font-bold font-serif text-[17px] text-gray-900 mb-2">
+                    {item.titulo}
+                    </h3>
+                    <p className="text-sm text-gray-600 leading-relaxed mb-3 pr-4">
+                    {item.descripcion}
+                    </p>
+                    <a 
+                    href={item.link} 
+                    className="text-[#D4AF37] text-sm font-semibold hover:text-[#b5952f] transition-colors flex items-center gap-1 w-fit"
+                    >
+                    Ver fallo &rarr;
                     </a>
                 </div>
                 </div>
             ))}
             </div>
 
-            <button className="mt-8 border border-gray-400 text-gray-600 px-6 py-2 text-sm font-semibold w-fit hover:bg-gray-50 transition-colors cursor-pointer mx-auto lg:mx-0">
-            VER MÁS JURISPRUDENCIA
-            </button>
+            <div className="mt-10">
+            <a 
+                href="#contacto"
+                className="inline-block border border-gray-400 text-gray-600 px-6 py-2.5 text-xs font-semibold tracking-wide hover:bg-gray-50 transition-colors"
+            >
+                VER MÁS JURISPRUDENCIA
+            </a>
+            </div>
         </div>
 
         </div>

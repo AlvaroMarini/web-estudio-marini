@@ -3,7 +3,7 @@ import { Hero } from './components/Hero'
 import { CasosFrecuentes } from './components/CasosFrecuentes'
 import { Servicios } from './components/Servicios'
 import { FaqYJurisprudencia } from './components/FaqYJurisprudencia'
-import { EvaluaTuCaso } from './components/EvaluaTuCaso'
+// import { EvaluaTuCaso } from './components/EvaluaTuCaso'
 import { Footer } from './components/Footer'
 import { BotonWhatsApp } from './components/BotonWhatsApp'
 
@@ -15,7 +15,7 @@ function App() {
       <CasosFrecuentes />
       <Servicios />
       <FaqYJurisprudencia />
-      <EvaluaTuCaso />
+      {/* <EvaluaTuCaso /> */}
       <Footer />
       
       <BotonWhatsApp />
