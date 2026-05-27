@@ -23,9 +23,9 @@ export const Servicios = () => {
         
         {/* Título */}
         <div className="flex items-center justify-center gap-4 mb-16">
-            <div className="h-px w-16 bg-[#D4AF37]/50"></div>
+            <div className="h-px w-25 bg-[#D4AF37]/50"></div>
             <h2 className="text-[#D4AF37] text-xl font-serif tracking-[0.2em]">NUESTROS SERVICIOS</h2>
-            <div className="h-px w-16 bg-[#D4AF37]/50"></div>
+            <div className="h-px w-25 bg-[#D4AF37]/50"></div>
         </div>
 
         {/* Grilla de 6 columnas en pantallas grandes */}

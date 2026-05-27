@@ -40,9 +40,9 @@ export const CasosFrecuentes = () => {
         
         {/* Título de la sección */}
         <div className="flex items-center justify-center gap-4 mb-12">
-            <div className="h-px w-16 bg-[#D4AF37]"></div>
+            <div className="h-px w-25 bg-[#D4AF37]"></div>
             <h2 className="text-[#0A122A] text-xl font-serif tracking-[0.2em]">CASOS FRECUENTES</h2>
-            <div className="h-px w-16 bg-[#D4AF37]"></div>
+            <div className="h-px w-25 bg-[#D4AF37]"></div>
         </div>
 
         {/* Grilla de Tarjetas */}
