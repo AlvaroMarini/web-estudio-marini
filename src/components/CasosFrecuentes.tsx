@@ -5,31 +5,31 @@ export const CasosFrecuentes = () => {
     {
         id: 1,
         icon: <ArrowLeftRight className="w-8 h-8 text-gray-700" strokeWidth={1.2} />,
-        title: "Me quieren pasar a PAMI",
+        title: "Me derivan a PAMI directamente",
         desc: "Analizamos tu caso y defendemos tu derecho a elegir tu cobertura."
     },
     {
         id: 2,
         icon: <Heart className="w-8 h-8 text-gray-700" strokeWidth={1.2} />,
-        title: "Quiero conservar OSDE al jubilarme",
-        desc: "Te ayudamos a mantener tu prepaga al momento de jubilarte."
+        title: "Cómo mantener mi obra social al jubilarme",
+        desc: "Te ayudamos a mantenerlas al momento de jubilarte."
     },
     {
         id: 3,
         icon: <TrendingUp className="w-8 h-8 text-gray-700" strokeWidth={1.2} />,
-        title: "Mi prepaga aumentó",
+        title: "Aumentos de las tarifas de las prepagas a jubilados",
         desc: "Revisamos aumentos abusivos y buscamos una solución."
     },
     {
         id: 4,
         icon: <FileX className="w-8 h-8 text-gray-700" strokeWidth={1.2} />,
-        title: "La obra social registró mi discontinuidad",
+        title: "La Obra Social me rechazó la continuidad",
         desc: "Iniciamos el reclamo para que puedas conservar tu cobertura."
     },
     {
         id: 5,
         icon: <ShieldAlert className="w-8 h-8 text-gray-700" strokeWidth={1.2} />,
-        title: "Me jubilé y perdí cobertura médica",
+        title: "Me jubilé y perdí toda la cobertura médica",
         desc: "Te asesoramos para recuperar tu cobertura y tus derechos."
     }
     ];
@@ -41,7 +41,7 @@ export const CasosFrecuentes = () => {
         {/* Título de la sección */}
         <div className="flex items-center justify-center gap-4 mb-12">
             <div className="h-px w-25 bg-[#D4AF37]"></div>
-            <h2 className="text-[#0A122A] text-xl font-serif tracking-[0.2em]">CASOS FRECUENTES</h2>
+            <h2 className="text-[#0A122A] text-xl font-serif tracking-[0.2em]">SITUACIONES HABITUALES</h2>
             <div className="h-px w-25 bg-[#D4AF37]"></div>
         </div>
 

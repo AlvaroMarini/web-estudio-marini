@@ -11,7 +11,7 @@ export const Servicios = () => {
     const servicios = [
     { id: 1, icon: <Scale className="w-10 h-10 text-[#D4AF37]" strokeWidth={1.2} />, title: "Restitución de obra social" },
     { id: 2, icon: <ShieldPlus className="w-10 h-10 text-[#D4AF37]" strokeWidth={1.2} />, title: "Amparos de salud" },
-    { id: 3, icon: <UserCheck className="w-10 h-10 text-[#D4AF37]" strokeWidth={1.2} />, title: "Continuidad de prepaga" },
+    { id: 3, icon: <UserCheck className="w-10 h-10 text-[#D4AF37]" strokeWidth={1.2} />, title: "Continuidad de Obra Social o de Prepaga" },
     { id: 4, icon: <Users className="w-10 h-10 text-[#D4AF37]" strokeWidth={1.2} />, title: "Cobertura médica para jubilados" },
     { id: 5, icon: <Landmark className="w-10 h-10 text-[#D4AF37]" strokeWidth={1.2} />, title: "Obras sociales sindicales" },
     { id: 6, icon: <Handshake className="w-10 h-10 text-[#D4AF37]" strokeWidth={1.2} />, title: "Conflictos con prepagas" }

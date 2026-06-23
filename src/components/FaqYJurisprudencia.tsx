@@ -14,8 +14,8 @@ export const FaqYJurisprudencia = () => {
         respuesta: "No, la ley ampara su derecho a continuar con su misma cobertura médica al momento de jubilarse, evitando el traspaso forzoso."
     },
     {
-        pregunta: "¿Puedo conservar mi prepaga?",
-        respuesta: "Sí. El cese de la relación laboral por jubilación no autoriza a la empresa de medicina prepaga a dar de baja la afiliación."
+        pregunta: "¿Puedo conservar mi prepaga o mi obra social?",
+        respuesta: "Sí. El cese de la relación laboral o de la actividad como autónomo, en virtud de haber adquirido una jubilación, no autoriza a la empresa de medicina prepaga a dar de baja la afiliación transfiriéndola al PAMI."
     },
     {
         pregunta: "¿Qué pasa con mis aportes?",
@@ -23,7 +23,7 @@ export const FaqYJurisprudencia = () => {
     },
     {
         pregunta: "¿Necesito iniciar juicio?",
-        respuesta: "Depende del caso y de la respuesta de la prepaga. Muchas veces se resuelve con intimaciones formales, en otras es necesario un amparo de salud."
+        respuesta: "Depende del caso y de la respuesta de la prepaga. Muchas veces se resuelve con intimaciones formales, en otras es necesario una acción de amparo."
     },
     {
         pregunta: "¿Cuánto demora el trámite?",
@@ -70,7 +70,7 @@ export const FaqYJurisprudencia = () => {
                     onClick={() => togglePregunta(index)}
                     className="w-full text-left py-4 flex justify-between items-center bg-white hover:bg-gray-50 transition-colors cursor-pointer"
                 >
-                    <span className="font-bold text-[15px] text-gray-800">{item.pregunta}</span>
+                    <span className="font-bold font-serif text-[17px] text-gray-800">{item.pregunta}</span>
                     {preguntaActiva === index ? (
                     <Minus className="w-5 h-5 text-[#D4AF37] shrink-0" />
                     ) : (

@@ -1,17 +1,10 @@
 import { Phone, Mail, Clock } from 'lucide-react';
-import { FaInstagram } from 'react-icons/fa';
 
 export const Footer = () => {
     return (
     <footer id="contacto" className="bg-[#0A122A] text-white pt-16 pb-8 px-8 border-t border-[#D4AF37]/30">
-        
-        {/* 
-            EL CAMBIO CLAVE:
-            - grid-cols-1 md:grid-cols-4: Ahora son 4 columnas a la par.
-            - md:divide-x divide-[#D4AF37]/30: Crea las líneas verticales doradas tenues.
-            - gap-12 md:gap-0: En celular da espacio, en compu saca el gap porque usamos paddings.
-        */}
-        <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-12 md:gap-0 md:divide-x divide-[#D4AF37]/30 mb-12">
+
+        <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-12 md:gap-0 md:divide-x divide-[#D4AF37]/30 mb-12">
         
         {/* Columna 1: Marca y Descripción */}
         <div className="flex flex-col md:pr-10">
@@ -27,7 +20,7 @@ export const Footer = () => {
             </div>
             </div>
             <p className="text-sm text-gray-400 leading-relaxed mt-2">
-            Especializado en derecho de la salud. Acompañamos a jubilados y pensionados para defender su derecho a elegir.
+            Especializado en el derecho a la conservación de una Obra Social o medicina Prepaga. Acompañamos a jubilados y pensionados para defender su derecho a elegir.
             </p>
         </div>
 
@@ -37,7 +30,7 @@ export const Footer = () => {
             <div className="flex flex-col gap-4 text-sm text-gray-300">
             <a className="flex items-center gap-3">
                 <Phone className="w-4 h-4 text-[#D4AF37]" />
-                221-4202444
+                +54 9 221-4202444
             </a>
             <a className="flex items-center gap-3">
                 <Mail className="w-4 h-4 text-[#D4AF37]" />
@@ -55,21 +48,6 @@ export const Footer = () => {
                 <span>Lunes a Viernes</span>
                 <span>9:00 a 18:00 hs</span>
             </div>
-            </div>
-        </div>
-        
-        {/* Columna 4: Seguinos */}
-        <div className="flex flex-col md:pl-10">
-            <h3 className="text-[#D4AF37] text-sm font-semibold tracking-wider mb-6">SEGUINOS</h3>
-            <div className="flex gap-4">
-            <a 
-                href="https://www.instagram.com/lawyermarini/?utm_source=ig_web_button_share_sheet" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="w-10 h-10 rounded-full border border-gray-500 flex items-center justify-center hover:border-[#D4AF37] hover:text-[#D4AF37] transition-all"
-            >
-                <FaInstagram className="w-5 h-5" />
-            </a>
             </div>
         </div>
 

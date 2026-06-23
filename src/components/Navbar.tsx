@@ -53,10 +53,10 @@ export const Navbar = () => {
             <div className="hidden lg:flex items-center gap-8">
             <ul className="flex items-center gap-5 text-[11px] xl:text-xs font-semibold tracking-wider text-gray-300">
                 <li><a href="#" className="text-[#D4AF37] border-b-2 border-[#D4AF37] pb-1 transition-colors">INICIO</a></li>
-                <li><a href="#casos" className="hover:text-[#D4AF37] transition-colors">CASOS FRECUENTES</a></li>
+                <li><a href="#casos" className="hover:text-[#D4AF37] transition-colors">SITUACIONES HABITUALES</a></li>
                 <li><a href="#servicios" className="hover:text-[#D4AF37] transition-colors">SERVICIOS</a></li>
-                <li><a href="#jurisprudencia" className="hover:text-[#D4AF37] transition-colors">JURISPRUDENCIA</a></li>
                 <li><a href="#faq" className="hover:text-[#D4AF37] transition-colors">FAQ</a></li>
+                <li><a href="#jurisprudencia" className="hover:text-[#D4AF37] transition-colors">JURISPRUDENCIA</a></li>
                 <li><a href="#contacto" className="hover:text-[#D4AF37] transition-colors">CONTACTO</a></li>
             </ul>
             
@@ -99,7 +99,7 @@ export const Navbar = () => {
 
             <ul className="flex flex-col gap-6 p-8 text-sm font-semibold tracking-wider text-gray-300 overflow-y-auto grow">
             <li><a href="#" onClick={cerrarMenu} className="text-[#D4AF37] hover:text-white transition-colors block">INICIO</a></li>
-            <li><a href="#casos" onClick={cerrarMenu} className="hover:text-[#D4AF37] transition-colors block">CASOS FRECUENTES</a></li>
+            <li><a href="#casos" onClick={cerrarMenu} className="hover:text-[#D4AF37] transition-colors block">SITUACIONES HABITUALES</a></li>
             <li><a href="#servicios" onClick={cerrarMenu} className="hover:text-[#D4AF37] transition-colors block">SERVICIOS</a></li>
             <li><a href="#faq" onClick={cerrarMenu} className="hover:text-[#D4AF37] transition-colors block">FAQ</a></li>
             <li><a href="#jurisprudencia" onClick={cerrarMenu} className="hover:text-[#D4AF37] transition-colors block">JURISPRUDENCIA</a></li>

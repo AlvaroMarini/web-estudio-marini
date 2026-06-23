@@ -45,9 +45,9 @@ export const Hero = () => {
                 <div className="h-px bg-[#D4AF37] grow"></div>
                 </div>
             </div>
-            <p className="text-lg md:text-xl text-gray-300 max-w-xl mt-4 leading-relaxed">
+            <h2 className="text-lg md:text-xl text-gray-300 max-w-xl mt-4 leading-relaxed">
                 Especializado en <span className="text-[#D4AF37] font-semibold">restitución de obra social médica</span> para jubilados, evitando el pase automático a <span className="text-[#D4AF37] font-semibold">PAMI</span>.
-            </p>
+            </h2>
 
             <div className="flex items-center gap-3 text-gray-300 mt-2">
                 <span className="text-[#D4AF37] text-xl">♦</span>
