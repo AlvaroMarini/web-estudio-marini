@@ -18,7 +18,8 @@ export const Hero = () => {
     };
     }, [isModalOpen]);
 
-    const emailSoporte = "estudiojuridicomarini@gmail.com";
+    const emailSoporte = "lawyermarini@gmail.com";
+    // const emailSoporte = "estudiojuridicomarini@gmail.com";
     const numeroWhatsApp = "5492214202444";
     const mensajeWhatsApp = encodeURIComponent("Hola Dr. Marini, me contacto desde su sitio web para hacerle una consulta.");
     const linkWhatsApp = `https://wa.me/${numeroWhatsApp}?text=${mensajeWhatsApp}`;

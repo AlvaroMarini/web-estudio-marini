@@ -34,7 +34,8 @@ export const Footer = () => {
             </a>
             <a className="flex items-center gap-3">
                 <Mail className="w-4 h-4 text-[#D4AF37]" />
-                estudiojuridicomarini@gmail.com
+                lawyermarini@gmail.com
+                {/* estudiojuridicomarini@gmail.com */}
             </a>
             </div>
         </div>
